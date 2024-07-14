@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Diseñador Gráfico, Rotulador e Impresor",
+    company: "Leo Publicidad",
+    description:
+      "Manejo ploters de impresión y corte, produciendo todo tipo de piezas gráficas, incluyendo su instalación.",
+    link: "https://www.instagram.com/leopublicidadd/?igsh=Ym02MXI0dGNleGk%3D",
+  },
+  {
+    date: "2011-2022",
+    title: "Dueño de imprenta",
+    company: "GD Gráfica",
+    description:
+      "Administración y producción en imprenta propia, con hasta 5 empleados a cargo. Atención al cliente / Diseño / Impresión / Post-Impresión.",
+    link: "https://www.instagram.com/gdgraficacba/",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
