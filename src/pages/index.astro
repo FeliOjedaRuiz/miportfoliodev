@@ -4,7 +4,7 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
-import ProfileCheck from "../components/icons/ProfileCheck.astro"
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import Projects from "../components/Projects.astro";
 import Hola from "../components/Hola.astro";
 import TitleSection from "../components/TitleSection.astro";
@@ -16,8 +16,18 @@ import AboutMe from "../components/AboutMe.astro";
   description="Contrata a Feliciano para desarollar tu página o aplicación web."
 >
   <main class="px-4">
-    <SectionContainer class="py-36 pb-28">
+    <SectionContainer id="hola" class="py-36 pb-28">
       <Hola />
+    </SectionContainer>
+
+    <div class="space-y-24">
+
+    <SectionContainer id="proyectos" >
+      <TitleSection>
+        <CodeIcon class="size:7 md:size-8 lg:size-9" />
+        Proyectos
+      </TitleSection>
+      <Projects />
     </SectionContainer>
 
     <SectionContainer id="experiencia">
@@ -28,14 +38,6 @@ import AboutMe from "../components/AboutMe.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos" class="mt-24">
-      <TitleSection>
-        <CodeIcon class="size:7 md:size-8 lg:size-9" />
-        Proyectos
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
-    
     <SectionContainer id="sobre-mi" class="mt-24">
       <TitleSection>
         <ProfileCheck class="size:7 md:size-8 lg:size-9" />
@@ -43,5 +45,6 @@ import AboutMe from "../components/AboutMe.astro";
       </TitleSection>
       <AboutMe />
     </SectionContainer>
+  </div>
   </main>
 </Layout>
