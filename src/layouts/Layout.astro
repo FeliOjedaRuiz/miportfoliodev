@@ -29,40 +29,41 @@ const { description, title } = Astro.props;
     class="relative text-black bg-[rgb(247,255,253)] dark:text-white dark:bg-[#011414]"
   >
     <div
-      class="absolute top-0 bottom-0 z-[-2] h-screen w-screen bg-[rgb(247,255,253)] dark:bg-[#011414] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,180,177,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-[rgb(247,255,253)] dark:bg-[#011414] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,180,177,0.3),rgba(255,255,255,0))]"
     >
     </div>
     <Header />
     <slot />
     <Footer />
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
+    
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overscroll-behavior: none;
+      }
+    
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+    </style>
   </body>
 </html>
 
-<style is:global>
-  :root {
-    color-scheme: light dark;
-  }
 
-  html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overscroll-behavior: none;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  }
-</style>

@@ -1,15 +1,27 @@
 ---
 import GitHub from "./icons/GitHub.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import React from "./icons/React.astro";
+import Vite from "./icons/Vite.astro";
 import LinkButton from "./LinkButton.astro";
 import Link from "./icons/Link.astro";
 
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-white/50 dark:bg-teal-800/50 text-[#003159] dark:text-white/90 dark:border-none border border-sky-600",
     icon: Tailwind,
   },
+  REACT: {
+    name: "React",
+    class: "bg-white/50 dark:bg-teal-800/50 text-[#003159] dark:text-white/90 dark:border-none border border-cyan-600",
+    icon: React,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-white/50 dark:bg-teal-800/50 text-[#8604c3] dark:text-white/90 dark:border-none border border-[#BD34FE]",
+    icon: Vite,
+  }
 };
 
 const PROJECTS = [
@@ -20,7 +32,7 @@ const PROJECTS = [
     link: "https://la-vin-nails-app.fly.dev/",
     github: "https://github.com/FeliOjedaRuiz/la-vin-nails-web-react",
     image: "/projects/laVinNailsMockup.webp",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
     title: "Jurado App",
@@ -29,7 +41,7 @@ const PROJECTS = [
     link: "https://jurado-app.fly.dev/",
     github: "https://github.com/FeliOjedaRuiz/jurado-app",
     image: "/projects/juradoAppMockup.webp",
-    tags: [],
+    tags: [TAGS.VITE, TAGS.REACT, TAGS.TAILWIND],
   },
 ];
 ---
