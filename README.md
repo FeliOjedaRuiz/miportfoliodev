@@ -1,4 +1,6 @@
-# Mi portfolio como Desarrollador Web 👨🏻‍💻 
+# Mi portfolio como Desarrollador Web 👨🏻‍💻
+
+Proyectos principales y experiencia laboral.
 
 ![image](https://github.com/user-attachments/assets/36bbd69c-4649-41f0-ad6a-01600788ddce)
 
